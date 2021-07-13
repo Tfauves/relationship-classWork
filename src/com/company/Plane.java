@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Plane extends Vehicle {
-    public List<Passenger> passengers = new ArrayList<>();
     public List<Tire> planeTires = new ArrayList<>();
 
     public boolean isLanding;

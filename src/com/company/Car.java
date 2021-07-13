@@ -26,7 +26,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Car extends Vehicle {
-    public List<Passenger> passengers = new ArrayList<>();
     public List<Tire> tires = new ArrayList<>();
 
     public Car(Engine engine, String type, int maxPassengers) {

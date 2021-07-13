@@ -23,11 +23,20 @@ public class Engine {
     }
 
     public void turnOn() {
-
+    // if isOn is equal false then set isOn to true.
+        //if (isOn == false;
+        if (!isOn)
+            isOn = true;
+        else
+            System.out.println("the engine is already running.");
     }
 
     public void turnOff() {
-
+    // if isOn is equal to true then set to false.
+        if (isOn)
+            isOn = false;
+        else
+            System.out.println("the engine is off already.");
     }
 
 }

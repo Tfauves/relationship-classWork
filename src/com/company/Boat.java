@@ -22,8 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Boat extends Vehicle {
-    public List<Passenger> passengers = new ArrayList<>();
-
     public int maxLoad;
 
     public Boat(Engine engine,  String type, int maxPassengers, int maxLoad) {

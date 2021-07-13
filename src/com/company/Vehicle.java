@@ -23,7 +23,7 @@ import java.util.List;
 
 public class Vehicle {
     public Engine engine;
-    public List<Passenger> passengers = new ArrayList<>();
+    public List<Passenger> passengersList = new ArrayList<>();
 
     public String type;
     public boolean isLand;
@@ -32,7 +32,7 @@ public class Vehicle {
     public boolean isSpace;
     public int maxPassengers;
 
-    public Vehicle(Engine engine,  String type, boolean isLand, boolean isWater, boolean isAir, boolean isSpace, int maxPassengers) {
+    public Vehicle(Engine engine, String type, boolean isLand, boolean isWater, boolean isAir, boolean isSpace, int maxPassengers) {
 
         this.engine = engine;
         this.type = type;
@@ -44,19 +44,24 @@ public class Vehicle {
     }
 
     public void turnOn() {
-
+        engine.turnOn();
     }
 
     public void turnOff() {
-
+        engine.turnOff();
     }
 
-    public void addPassenger() {
+    public void addPassenger(String name, int weight) {
+        Passenger passenger = new Passenger(name, weight);
+
+        if (passengersList.size() < maxPassengers)
+            passengersList.add(passenger);
 
     }
 
     public void removePassenger() {
-
+        if (passengersList.size() > 0)
+            passengersList.remove(0);
     }
 
     public String toString() {
