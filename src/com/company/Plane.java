@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Plane extends Vehicle {
-    public List<Tire> planeTires = new ArrayList<>();
+    public List<Tire> planeTireList = new ArrayList<>();
 
     public boolean isLanding;
 
@@ -45,13 +45,14 @@ public class Plane extends Vehicle {
     public void addTire(Tire newTire, int qty) {
 
         for (int i = 0; i < qty; i++) {
-        planeTires.add(newTire);
+        planeTireList.add(newTire);
         }
 
     }
 
     public void removeTire() {
-
+        if (planeTireList.size() > 0)
+            planeTireList.remove(0);
     }
 
     public void replaceTire() {

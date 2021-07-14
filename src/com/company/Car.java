@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Car extends Vehicle {
-    public List<Tire> tires = new ArrayList<>();
+    public List<Tire> tireList = new ArrayList<>();
 
     public Car(Engine engine, String type, int maxPassengers) {
 
@@ -36,19 +36,17 @@ public class Car extends Vehicle {
     public void addTire(Tire newTire, int qty) {
 
         for (int i = 0; i < qty; i++) {
-        tires.add(newTire);
+        tireList.add(newTire);
         }
-
     }
 
     public void removeTire() {
-
+        if (tireList.size() > 0)
+            tireList.remove(0);
     }
 
     public void replaceTire() {
 
     }
-
-
 
 }
