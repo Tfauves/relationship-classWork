@@ -11,8 +11,9 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        Tire carTire = new Tire(33, 35);
-        Tire planeTire = new Tire(40, 200);
+        Tire carTire = new Tire(33, 40, 15, 35 );
+        Tire planeTire = new Tire(40, 285, 98, 215);
+        planeTire.fill();
 
         Car car01 = new Car(new Engine("V6", false, 0), "Audi A6", 4);
         car01.addTire(carTire, 4);
