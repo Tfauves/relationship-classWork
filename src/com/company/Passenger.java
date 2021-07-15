@@ -17,4 +17,5 @@ public class Passenger {
         this.weight = weight;
     }
 
+
 }

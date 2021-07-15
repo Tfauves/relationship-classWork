@@ -57,6 +57,9 @@ public class Vehicle {
         if (passengersList.size() < maxPassengers)
             passengersList.add(passenger);
 
+        if (passengersList.size() >= maxPassengers)
+            System.out.println("The max amount of passengers is " + maxPassengers + " no more passengers may be added.");
+
     }
 
     public void removePassenger() {
@@ -68,5 +71,6 @@ public class Vehicle {
 
         return engine.type + " " + type + " " + "max passengers " + maxPassengers;
     }
+
 
 }

@@ -25,7 +25,10 @@ public class Main {
         car02.addTire(carTire, 4);
 
         Boat boat01 = new Boat( new Engine("boat", false, 0), "pontoon", 12, 1000);
-
+        boat01.addPassenger("Simon", 180);
+        boat01.addPassenger("Phil", 210);
+        boat01.addPassenger("Ricky", 145);
+        boat01.addPassenger("Wayne", 205);
         Plane plane01 = new Plane(new Engine("jet", false, 0), "747", 524, false);
         plane01.addTire(planeTire, 6);
 
@@ -34,7 +37,7 @@ public class Main {
         System.out.println(boat01);
         System.out.println(plane01);
         System.out.println(car01.tireList);
-        System.out.println(car01.passengersList.toString());
+        //System.out.println(car01.passengersList.toString());
     }
 
 }
